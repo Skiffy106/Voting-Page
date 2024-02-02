@@ -1,0 +1,44 @@
+{
+  "roles": [
+    {
+      "id": "president",
+      "name": "President",
+      "candidates": [{ "id": "Vivien", "name": "Vivien" }]
+    },
+    {
+      "id": "vicePresident",
+      "name": "Vice President",
+      "candidates": [
+        { "id": "max-vp", "name": "Max" },
+        { "id": "anthony-vp", "name": "Anthony" },
+        { "id": "youtai", "name": "Youtai" },
+        { "id": "ethan", "name": "Ethan" }
+      ]
+    },
+    {
+      "id": "treasurer",
+      "name": "Treasurer",
+      "candidates": [
+        { "id": "ryan", "name": "ryan" },
+        { "id": "sahit", "name": "Sahit" }
+      ]
+    },
+    {
+      "id": "secretary",
+      "name": "Secretary",
+      "candidates": [
+        { "id": "pj", "name": "PJ" },
+        { "id": "max-sec", "name": "Max" },
+        { "id": "tanner", "name": "Tanner" }
+      ]
+    },
+    {
+      "id": "projectManager",
+      "name": "Project Manager",
+      "candidates": [
+        { "id": "anthony-pm", "name": "Anthony" },
+        { "id": "aiden", "name": "Aiden" }
+      ]
+    }
+  ]
+}

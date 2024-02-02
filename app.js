@@ -11,7 +11,9 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 // Read the candidates JSON file
-const candidatesData = JSON.parse(fs.readFileSync("candidates.json", "utf-8"));
+const candidatesData = JSON.parse(fs.readFileSync("csClub.json", "utf-8"));
+
+// TODO: Change json for different vote
 
 // Routes
 app.get("/", (req, res) => {
