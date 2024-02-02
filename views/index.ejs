@@ -10,69 +10,19 @@
   <body>
     <div class="wrapper">
       <h1>Voting Page</h1>
-
       <form action="/submit-vote" method="post">
-        <!-- Voting category for president -->
-        <h2>President</h2>
+        <% for (const role of candidatesData.roles) { %>
+        <h2><%= role.name %></h2>
         <br />
-        <label for="presidentCandidate">Select Candidate:</label>
-        <select name="presidentCandidate" required>
-          <option value="presidentCandidate1">President Candidate 1</option>
-          <option value="presidentCandidate2">President Candidate 2</option>
-          <!-- Add more options as needed -->
+        <label for="<%= role.id %>Candidate">Select Candidate:</label>
+        <select name="<%= role.id %>Candidate" required>
+          <% for (const candidate of role.candidates) { %>
+          <option value="<%= candidate.id %>"><%= candidate.name %></option>
+          <% } %>
         </select>
         <hr />
-
-        <!-- Voting category for vice president -->
-        <h2>Vice President</h2>
-        <br />
-        <label for="vicePresidentCandidate">Select Candidate:</label>
-        <select name="vicePresidentCandidate" required>
-          <option value="vicePresidentCandidate1">
-            Vice President Candidate 1
-          </option>
-          <option value="vicePresidentCandidate2">
-            Vice President Candidate 2
-          </option>
-        </select>
-        <hr />
-
-        <h2>Treasurer</h2>
-        <br />
-        <label for="treasurerCandidate">Select Candidate:</label>
-        <select name="treasurerCandidate" required>
-          <option value="treasurerCandidate1">treasurerCandidate 1</option>
-          <option value="treasurerCandidate2">treasurerCandidate 2</option>
-        </select>
-        <hr />
-
-        <h2>Secretary</h2>
-        <br />
-        <label for="secretaryCandidate">Select Candidate:</label>
-        <select name="secretaryCandidate" required>
-          <option value="secretaryCandidate1">secretaryCandidate 1</option>
-          <option value="secretaryCandidate2">secretaryCandidate 2</option>
-        </select>
-        <hr />
-
-        <h2>Promoter</h2>
-        <br />
-        <label for="promoterCandidate">Select Candidate:</label>
-        <select name="promoterCandidate" required>
-          <option value="promoterCandidate1">promoterCandidate 1</option>
-          <option value="promoterCandidate2">promoterCandidate 2</option>
-        </select>
-        <hr />
-
-        <h2>Project Manager</h2>
-        <br />
-        <label for="projectManagerCandidate">Select Candidate:</label>
-        <select name="projectManagerCandidate" required>
-          <option value="projectManager1">projectManager 1</option>
-          <option value="projectManager2">projectManager 2</option>
-        </select>
-        <hr />
-
+        <input type="hidden" name="category" value="<%= role.id %>" />
+        <% } %>
         <button type="submit">Submit Votes</button>
       </form>
     </div>

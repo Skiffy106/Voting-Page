@@ -1,0 +1,20 @@
+{
+  "roles": [
+    {
+      "id": "president",
+      "name": "President",
+      "candidates": [
+        { "id": "candidate1", "name": "Candidate 1" },
+        { "id": "candidate2", "name": "Candidate 2" }
+      ]
+    },
+    {
+      "id": "vicePresident",
+      "name": "Vice President",
+      "candidates": [
+        { "id": "vpCandidate1", "name": "Vice President Candidate 1" },
+        { "id": "vpCandidate2", "name": "Vice President Candidate 2" }
+      ]
+    }
+  ]
+}
